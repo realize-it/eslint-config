@@ -2,7 +2,7 @@
 
 В данный пакет входит набор рекомендуемых правил и плагинов для фронтенд-проектов компании Realize.
 
-## Установка и настройка
+## Установка пакета
 
 Самостоятельно установите eslint версии 7 или выше:
 
@@ -20,7 +20,7 @@
 
 | Плагин/конфиг | Версия | Используется для extends |
 | ------ | ------ | ------ |
-| eslint | peer | eslint:recommended  |
+| eslint | (peer) | eslint:recommended  |
 | [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) | 18.2.1 | eslint-config-airbnb <br /> eslint-config-airbnb/hooks |
 | [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest) | 24.1.3 | plugin:jest/all |
 | [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn) | 26.0.1 | ➖ |
@@ -39,3 +39,9 @@
 Набор рекомендуемых правил `unicorn` отключен по умолчанию по причине чрезмерной жесткости.
 При желании можно расширить свой конфиг, добавив в него `plugin:unicorn/recommended`.
 
+### Прочие плагины
+
+Также вы можете найти полезными следующие плагины и инструменты:
+
+* [eslint-plugin-boundaries](https://www.npmjs.com/package/eslint-plugin-boundaries)
+* [eslint-import-resolver-alias](https://www.npmjs.com/package/eslint-import-resolver-alias)
