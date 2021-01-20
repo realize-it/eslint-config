@@ -1,0 +1,17 @@
+# файлы создаваемые редакторами
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+*.orig
+*.bak
+
+# файлы системы
+.DS_Store
+Thumbs.db
+
+# npm
+node_modules/
+
+# логи
+*.log
