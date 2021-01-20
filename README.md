@@ -10,7 +10,11 @@
 
 Установите данный набор правил и конфигов:
 
-`todo`
+`npm install github:realize-it/eslint-config#main`
+
+### Обновление пакета
+
+`npm update @realize/eslint-config`
 
 ## Плагины и готовые конфиги правил
 
@@ -26,5 +30,12 @@
 | [eslint-plugin-unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports) | 1.0.1 | ➖ |
 | [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) | 4.14.0 | plugin:@typescript-eslint/recommended |
 
+### Прочие инструменты
+
+[eslint-import-resolver-typescript](https://www.npmjs.com/package/eslint-import-resolver-typescript)
+
+### Про не включенные рекомендуемые наборы правил
+
 Набор рекомендуемых правил `unicorn` отключен по умолчанию по причине чрезмерной жесткости.
 При желании можно расширить свой конфиг, добавив в него `plugin:unicorn/recommended`.
+
