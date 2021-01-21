@@ -18,3 +18,5 @@ node_modules/
 
 # тест
 test.js
+test.ts
+test.json
