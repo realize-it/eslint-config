@@ -177,6 +177,36 @@ module.exports = {
             },
         ],
     },
+    overrides: [
+        /** для js-файлов */
+        {
+            files: ['*.js', '*.jsx'],
+            rules: {
+                '@typescript-eslint/explicit-module-boundary-types': 'off',
+                '@typescript-eslint/explicit-function-return-type': 'off',
+            },
+        },
+        /** для ts файлов */
+        {
+            files: ['*.ts', '*.tsx'],
+            rules: {
+                'jsdoc/require-param': [
+                    'warn',
+                    {
+                        checkDestructured: false,
+                    },
+                ],
+                'jsdoc/require-param-type': 'off',
+                'jsdoc/check-param-names': [
+                    'warn',
+                    {
+                        checkDestructured: false,
+                    },
+                ],
+                'jsdoc/require-returns-type': 'off',
+            },
+        },
+    ],
     env: {
         browser: true,
     },
