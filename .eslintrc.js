@@ -92,17 +92,6 @@ module.exports = {
         ],
         'no-shadow': 'off', // заменено на @typescript-eslint/no-shadow
         '@typescript-eslint/no-shadow': 'error',
-        'operator-linebreak': [
-            'error',
-            'after',
-            {
-                overrides: {
-                    '=': 'none',
-                    '?': 'before',
-                    ':': 'before',
-                },
-            },
-        ],
         'no-restricted-syntax': [
             'error',
             // из airbnb
