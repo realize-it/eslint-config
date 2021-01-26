@@ -37,6 +37,7 @@ module.exports = {
             vars: 'all',
             args: 'after-used',
             ignoreRestSiblings: true,
+            argsIgnorePattern: '^_',
         }],
         'no-use-before-define': 'off', // заменено на @typescript-eslint/no-use-before-define
         '@typescript-eslint/no-use-before-define': ['error'],
