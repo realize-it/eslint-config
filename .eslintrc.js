@@ -35,9 +35,8 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off', // заменено на unused-imports/no-unused-vars-ts
         'unused-imports/no-unused-vars-ts': ['error', {
             vars: 'all',
-            // args: 'after-used', // todo проверить team
+            args: 'after-used',
             ignoreRestSiblings: true,
-            // argsIgnorePattern: '^_', // todo проверить team
         }],
         'no-use-before-define': 'off', // заменено на @typescript-eslint/no-use-before-define
         '@typescript-eslint/no-use-before-define': ['error'],
