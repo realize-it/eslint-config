@@ -150,10 +150,6 @@ module.exports = {
         'react/react-in-jsx-scope': 'off', // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
         'unicorn/no-abusive-eslint-disable': 'error',
         'unicorn/catch-error-name': ['error', { name: 'exception' }],
-        '@typescript-eslint/array-type': ['error', {
-            default: 'array-simple',
-            readonly: 'array-simple',
-        }],
         '@typescript-eslint/explicit-function-return-type': ['error', {
             allowExpressions: true,
             allowTypedFunctionExpressions: true,
