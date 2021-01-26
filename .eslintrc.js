@@ -39,6 +39,7 @@ module.exports = {
             ignoreRestSiblings: true,
             argsIgnorePattern: '^_',
         }],
+        'no-multi-spaces': ['error', {ignoreEOLComments: true}],
         'no-use-before-define': 'off', // заменено на @typescript-eslint/no-use-before-define
         '@typescript-eslint/no-use-before-define': ['error'],
         '@typescript-eslint/no-empty-function': 'warn',
