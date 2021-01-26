@@ -31,7 +31,6 @@ module.exports = {
             mjs: 'never',
             json: 'always',
         }],
-        'no-param-reassign': ['error', { props: false }], // todo team проверить default props
         'no-unused-vars': 'off', // заменено на unused-imports/no-unused-vars-ts
         '@typescript-eslint/no-unused-vars': 'off', // заменено на unused-imports/no-unused-vars-ts
         'unused-imports/no-unused-vars-ts': ['error', {

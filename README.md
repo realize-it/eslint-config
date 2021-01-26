@@ -30,6 +30,8 @@
 | [eslint-plugin-unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports) | 1.0.1 | ➖ |
 | [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) | 4.14.0 | plugin:@typescript-eslint/recommended |
 
+### todo no-console
+
 ### Особенности использования без JavaScript
 
 todo про unused-imports
