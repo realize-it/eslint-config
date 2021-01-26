@@ -1,4 +1,4 @@
-/* eslint-disable sonarjs/no-duplicate-string -- файл конфигурационный */
+/* eslint-disable sonarjs/no-duplicate-string,quote-props -- файл конфигурационный + единообразие */
 
 module.exports = {
     plugins: [
@@ -20,33 +20,14 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
     ],
     rules: {
-        'react/jsx-filename-extension': ['error', {
-            extensions: ['.jsx', '.tsx'],
-        }],
-        'import/extensions': ['error', {
-            js: 'never',
-            jsx: 'never',
-            ts: 'never',
-            tsx: 'never',
-            mjs: 'never',
-            json: 'always',
-        }],
         'no-unused-vars': 'off', // заменено на unused-imports/no-unused-vars-ts
-        '@typescript-eslint/no-unused-vars': 'off', // заменено на unused-imports/no-unused-vars-ts
-        'unused-imports/no-unused-vars-ts': ['error', {
-            vars: 'all',
-            args: 'after-used',
-            ignoreRestSiblings: true,
-            argsIgnorePattern: '^_',
-        }],
+        'no-nested-ternary': 'off', // заменено на unicorn-реализацию
         'no-multi-spaces': ['error', { ignoreEOLComments: true }],
         'no-use-before-define': 'off', // заменено на @typescript-eslint/no-use-before-define
-        '@typescript-eslint/no-use-before-define': ['error'],
-        '@typescript-eslint/no-empty-function': 'warn',
-        curly: ['error', 'all'],
+        'curly': ['error', 'all'],
         'no-console': 'warn',
         'no-alert': 'error',
-        indent: ['error', 4, { // из airbnb с изменённым числом пробелов
+        'indent': ['error', 4, { // из airbnb с изменённым числом пробелов
             SwitchCase: 1,
             VariableDeclarator: 1,
             outerIIFEBody: 1,
@@ -83,15 +64,7 @@ module.exports = {
             },
         ],
         'no-unused-expressions': 'off', // заменено на @typescript-eslint/no-unused-expressions
-        '@typescript-eslint/no-unused-expressions': ['error',
-            {
-                allowShortCircuit: false,
-                allowTernary: false,
-                allowTaggedTemplates: false,
-            },
-        ],
         'no-shadow': 'off', // заменено на @typescript-eslint/no-shadow
-        '@typescript-eslint/no-shadow': 'error',
         'no-restricted-syntax': [
             'error',
             // из airbnb
@@ -125,8 +98,9 @@ module.exports = {
                 skipComments: true,
             },
         ],
-        'no-nested-ternary': 'off', // заменено на unicorn-реализацию
-        'unicorn/no-nested-ternary': 'error',
+        'react/jsx-filename-extension': ['error', {
+            extensions: ['.jsx', '.tsx'],
+        }],
         'react/destructuring-assignment': 'off', // в ts рушит вывод типов после тайпгарда
         'react/prop-types': 'off',
         'react/jsx-indent': ['error', 4],
@@ -139,8 +113,17 @@ module.exports = {
         'react/static-property-placement': ['error', 'static public field'],
         'react/jsx-uses-react': 'off', // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
         'react/react-in-jsx-scope': 'off', // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
-        'unicorn/no-abusive-eslint-disable': 'error',
-        'unicorn/catch-error-name': ['error', { name: 'exception' }],
+        '@typescript-eslint/no-unused-expressions': ['error',
+            {
+                allowShortCircuit: false,
+                allowTernary: false,
+                allowTaggedTemplates: false,
+            },
+        ],
+        '@typescript-eslint/no-shadow': 'error',
+        '@typescript-eslint/no-use-before-define': ['error'],
+        '@typescript-eslint/no-empty-function': 'warn',
+        '@typescript-eslint/no-unused-vars': 'off', // заменено на unused-imports/no-unused-vars-ts
         '@typescript-eslint/explicit-function-return-type': ['error', {
             allowExpressions: true,
             allowTypedFunctionExpressions: true,
@@ -161,7 +144,24 @@ module.exports = {
             'ts-check': false,
             minimumDescriptionLength: 10,
         }],
+        'unicorn/no-nested-ternary': 'error',
+        'unicorn/no-abusive-eslint-disable': 'error',
+        'unicorn/catch-error-name': ['error', { name: 'exception' }],
         'unused-imports/no-unused-imports-ts': 'error',
+        'unused-imports/no-unused-vars-ts': ['error', {
+            vars: 'all',
+            args: 'after-used',
+            ignoreRestSiblings: true,
+            argsIgnorePattern: '^_',
+        }],
+        'import/extensions': ['error', {
+            js: 'never',
+            jsx: 'never',
+            ts: 'never',
+            tsx: 'never',
+            mjs: 'never',
+            json: 'always',
+        }],
         'eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],
         'eslint-comments/require-description': ['warn', { ignore: ['eslint-enable'] }],
         'jsdoc/require-jsdoc': [
