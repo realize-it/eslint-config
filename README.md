@@ -4,13 +4,21 @@
 
 ## Установка пакета
 
-Самостоятельно установите eslint версии 7 или выше:
+Самостоятельно установить `eslint` версии 7 или выше:
 
 `npm i eslint`
 
-Установите данный набор правил и конфигов:
+Установить данный набор правил и конфигов:
 
 `npm install github:realize-it/eslint-config#main`
+
+Расширить свой конфиг `.eslintrc.js` или аналогичный:
+
+```
+extends: [
+    '@realize/eslint-config',
+],
+```
 
 ### Обновление пакета
 
@@ -30,11 +38,31 @@
 | [eslint-plugin-unused-imports](https://www.npmjs.com/package/eslint-plugin-unused-imports) | 1.0.1 | ➖ |
 | [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) | 4.14.0 | plugin:@typescript-eslint/recommended |
 
-### todo no-console
+### no-console
 
-### Особенности использования без JavaScript
+По умолчанию `no-console` настроен на `warn`. Вместо этого рекомендуется отключить это правило,
+заменив его на [babel-plugin-transform-remove-console](https://www.npmjs.com/package/babel-plugin-transform-remove-console).
 
-todo про unused-imports
+### Особенности использования без TypeScript (JavaScript-only проекты)
+
+Переопределить правила:
+
+```
+'unused-imports/no-unused-imports-ts': 'off',
+'unused-imports/no-unused-vars-ts': 'off',
+```
+
+Вместо этого включить:
+
+```
+'unused-imports/no-unused-imports': 'error',
+'unused-imports/no-unused-vars': ['error', {
+    vars: 'all',
+    args: 'after-used',
+    ignoreRestSiblings: true,
+    argsIgnorePattern: '^_',
+}],
+```
 
 ### Прочие инструменты
 
