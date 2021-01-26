@@ -135,7 +135,7 @@ module.exports = {
             },
         ],
         'no-nested-ternary': 'off', // заменено на unicorn-реализацию
-        'unicorn/no-nested-ternary': 'error', // todo попробовать включить
+        'unicorn/no-nested-ternary': 'error',
         'react/destructuring-assignment': 'off', // в ts рушит вывод типов после тайпгарда
         'react/prop-types': 'off',
         'react/jsx-indent': ['error', 4],
