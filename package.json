@@ -1,6 +1,6 @@
 {
-  "name": "@realize/eslint-config",
-  "version": "0.1.0",
+  "name": "@realize-it/eslint-config",
+  "version": "0.1.1",
   "description": "Набор общих правил и плагинов eslint для фронтенд-проектов компании Realize",
   "main": "index.js",
   "scripts": {

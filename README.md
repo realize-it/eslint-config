@@ -10,19 +10,19 @@
 
 Установить данный набор правил и конфигов:
 
-`npm install github:realize-it/eslint-config#main`
+`npm install @realize-it/eslint-config`
 
 Расширить свой конфиг `.eslintrc.js` или аналогичный:
 
 ```
 extends: [
-    '@realize/eslint-config',
+    '@realize-it/eslint-config',
 ],
 ```
 
 ### Обновление пакета
 
-`npm update @realize/eslint-config`
+`npm update @realize-it/eslint-config`
 
 ## Плагины и готовые конфиги правил
 
